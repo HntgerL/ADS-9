@@ -13,7 +13,6 @@ struct Node {
 };
 
 class PMTree {
-
  private:
     void BuildSubtree(std::shared_ptr<Node> node,
         const std::vector<char>& remaining);
@@ -21,7 +20,6 @@ class PMTree {
     int permutation_count_;
 
  public:
-
     explicit PMTree(const std::vector<char>& symbols);
     std::shared_ptr<Node> GetRoot() const;
     int GetPermutationCount() const;
