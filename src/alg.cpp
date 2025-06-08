@@ -97,8 +97,8 @@ std::vector<char> getPerm2(PMTree& tree, int num) {
 
 bool FindNthPermutation(PMTree& tree,
     const std::shared_ptr<Node>& node,
-    std::vector<char>& result,
     std::vector<char>& path,
+    std::vector<char>& result,
     int& current_num,
     int target_num) {
     if (!node->children.empty()) {
