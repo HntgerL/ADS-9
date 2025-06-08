@@ -13,6 +13,7 @@ struct Node {
 };
 
 class PMTree {
+
  private:
     void BuildSubtree(std::shared_ptr<Node> node,
         const std::vector<char>& remaining);
@@ -20,6 +21,7 @@ class PMTree {
     int permutation_count_;
 
  public:
+
     explicit PMTree(const std::vector<char>& symbols);
     std::shared_ptr<Node> GetRoot() const;
     int GetPermutationCount() const;
@@ -32,7 +34,6 @@ class PMTree {
         std::vector<char>& path,
         std::vector<std::vector<char>>& result);
 };
-
 std::vector<char> getPerm1(PMTree& tree, int num);
 std::vector<std::vector<char>> getAllPerms(PMTree& tree);
 std::vector<char> getPerm2(PMTree& tree, int num);
