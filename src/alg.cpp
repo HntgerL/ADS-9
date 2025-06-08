@@ -111,14 +111,12 @@ bool FindNthPermutation(PMTree& tree,
                     result, current_num, target_num)) {
                     return true;
                 }
-            } 
-            else {
+            } else {
                 current_num += subtree_count;
             }
             path.pop_back();
         }
-    } 
-    else {
+    } else {
         if (!path.empty()) {
             if (current_num == target_num - 1) {
                 result = path;
