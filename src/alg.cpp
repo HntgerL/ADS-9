@@ -84,17 +84,6 @@ std::vector<std::vector<char>> getAllPerms(PMTree& tree) {
     return result;
 }
 
-std::vector<char> getPerm2(PMTree& tree, int num) {
-    std::vector<char> path;
-    int current_num = 0;
-    std::vector<char> result;
-    auto root = tree.GetRoot();
-    if (root && num >= 1 && num <= tree.GetPermutationCount()) {
-        FindNthPermutation(tree, root, path, result, current_num, num);
-    }
-    return result;
-}
-
 bool FindNthPermutation(PMTree& tree,
     const std::shared_ptr<Node>& node,
     std::vector<char>& path,
@@ -133,4 +122,15 @@ std::vector<char> getPerm1(PMTree& tree, int num) {
     if (num < 1 || num > total) return {};
     std::vector<std::vector<char>> all_perms = getAllPerms(tree);
     return all_perms[num - 1];
+}
+
+std::vector<char> getPerm2(PMTree& tree, int num) {
+    std::vector<char> path;
+    int current_num = 0;
+    std::vector<char> result;
+    auto root = tree.GetRoot();
+    if (root && num >= 1 && num <= tree.GetPermutationCount()) {
+        FindNthPermutation(tree, root, path, result, current_num, num);
+    }
+    return result;
 }
