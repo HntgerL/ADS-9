@@ -7,7 +7,6 @@
 
 struct Node {
     char value;
-    explicit Node(char val);
     std::vector<std::shared_ptr<Node>> children;
     explicit Node(char val);
 };
